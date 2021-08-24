@@ -37,7 +37,7 @@ programa
 		escreva("\nO valor do quadrado de ",n3," é de: ",q3)
 		escreva("\nO valor do quadrado de ",n4," é de: ",q4)
 			}
-		}
+		}
 }
 /* $$$ Portugol Studio $$$ 
  * 
