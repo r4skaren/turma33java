@@ -17,26 +17,27 @@ programa
 		//entradas
 		escreva("\nOlá, digite o seu código de identificação: ")
 	 	leia(codigo)
-	 	escreva("Olá, digite o número de horas trabalhadas: ")
+	 	escreva("Agora digite o número de horas trabalhadas: ")
 	 	leia(numeroHorasTrabalhadas)
 	 	
-		//processamentos//saidas
+		//processamentos//saida
 		horaLimite = 50
 		excesso = numeroHorasTrabalhadas - horaLimite
-		salario = 10+excesso
+		salario = 10
+		
 		
 		se (numeroHorasTrabalhadas > 50){
 		escreva("Há um excesso de horas trabalhadas, você receberá ",excesso*20)
 			//
-			escreva("\nSeu salário total foi de: R$ ",salario,"\n")
+			escreva("\nSeu salário total foi de: R$ ",salario + excesso*20,"\n")
 			escreva("Já o salário excedente total de: R$ ",excesso*20)
 		}
 
 		se (numeroHorasTrabalhadas <= 50){
 		escreva("Não há excessos, logo sem acrescimos.\n")
 			//
-			escreva("Seu salário total foi de: R$ ",salario,"\n")
-			escreva("Já o salário excedente total de: R$ ",excesso)
+			escreva("Então, seu salário total foi de: R$ ",numeroHorasTrabalhadas*salario,"\n")
+			escreva("Já o salário excedente total de: R$ ", 0)
 	}
 	}
 }
@@ -45,7 +46,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 1377; 
+ * @POSICAO-CURSOR = 613; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

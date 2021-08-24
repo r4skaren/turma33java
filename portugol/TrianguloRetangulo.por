@@ -18,12 +18,17 @@ programa
 		escreva ("Digite o valor da base do triângulo em centímetros: ")
 		leia (base)
 
-		//processamentos
+		//processamentos//saidas
+		se (base <= 0){
+			escreva ("Impossível realizar. Valor da base incorreto!")
+		}
+		senao se (altura <= 0){
+			escreva ("Impossível realizar. Valor da altura incorreto!")
+		}
+		senao {
 		triangulo = (altura * base) / 2
-		
-		//saidas
 		escreva ("O valor da área do triângulo é de: ", triangulo , " cm²")
-	
+			}
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -31,7 +36,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 279; 
+ * @POSICAO-CURSOR = 540; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
