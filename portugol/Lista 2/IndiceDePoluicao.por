@@ -14,9 +14,11 @@ programa
 	{
 		//variaveis
 		real indiceP
+		
 		//entradas
 		escreva("Digite o índice de poluição: ")
 		leia(indiceP)
+		
 		//processamentos//saidas
 		se (indiceP >= 0.3 e indiceP < 0.4){
 			escreva("Índice de poluição acima de 0,3 e menor que 0,4.")
@@ -43,7 +45,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 559; 
+ * @POSICAO-CURSOR = 780; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
