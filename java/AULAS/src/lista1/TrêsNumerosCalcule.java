@@ -12,11 +12,11 @@ public class TrêsNumerosCalcule {
 
 		//entradas
 		System.out.print("Informe o número para A:");
-		A = (int) leia.nextDouble();
+		A = (int) leia.nextInt();
 		System.out.print("Informe o número para B:");
-		B = (int) leia.nextDouble();
+		B = (int) leia.nextInt();
 		System.out.print("Informe o número para C:");
-		C = (int) leia.nextDouble();
+		C = (int) leia.nextInt();
 		
 		//processamentos
 		R = (int) (Math.pow(A+B,2));
@@ -25,7 +25,7 @@ public class TrêsNumerosCalcule {
 		D = (int) (R+S/2);
 		
 		//saidas
-		System.out.print("Informe o número para B:");
+		System.out.print("O valor final é: "+ D);
 	}
 
 }
