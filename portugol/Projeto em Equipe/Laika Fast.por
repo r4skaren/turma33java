@@ -63,9 +63,22 @@ programa
           	
           	escreva("\n▶ Digite o código do produto: ")
           	leia(codProduto)
+          	codProduto = txt.caixa_alta(codProduto)
 
           	          	
 			contador++
+			
+			
+			
+
+          		enquanto(codProduto != "G4-1" e codProduto != "G4-2" e codProduto != "G4-3" e codProduto != "G4-4" e codProduto != "G4-5" e codProduto != "G4-6" e codProduto != "G4-8" e codProduto != "G4-9" e codProduto != "G4-10"){
+          		escreva("\nCódigo Inválido, verifique e digite novamente:  ")
+          		leia(codProduto)
+          		codProduto = txt.caixa_alta(codProduto)
+          	
+           	}
+          	
+			
           	para(inteiro x=0;x<10; x++){
           		se(codProduto == codigo[x]){
           			linha = x
@@ -78,10 +91,11 @@ programa
           				}
 
           				escreva("▶ Produto já adicionado, digite a nova quantidade: ")
-          				leia(quantidade)   
-          				se(quantidade > estoque[enderecoCarrinho] ou quantidade<=0){
-                  				escreva("\nQuantidade indisponíveL, verifique e tente novamente.")
-                  			     escreva("Produto já adicionado, digite a nova quantidade ")
+          				leia(quantidade) 
+          				  
+          				enquanto(quantidade > estoque[enderecoCarrinho] ou quantidade<=0){
+                  				escreva("\nQuantidade indisponível, verifique e tente novamente: ")
+                  			     
           					leia(quantidade) 	
                 			}  				
           				 
@@ -90,15 +104,13 @@ programa
           				
           				carrinhoQuantidade[enderecoCarrinho] = quantidade
           				contador--
-          				}
-          			
-          			senao{
-							
+          				}senao{	
+          											
           				escreva("\n▶ Digite a quantidade: ")
           				leia(quantidade)
           				
 
-                  		se(quantidade > estoque[enderecoCarrinho] ou quantidade<=0){
+                  		enquanto(quantidade > estoque[enderecoCarrinho] ou quantidade<=0){
                   			escreva("\nQuantidade indisponíveL, verifique e tente novamente.")
                   			escreva("\n▶ Digite a quantidade: ")
           				leia(quantidade)
@@ -130,13 +142,20 @@ programa
           		
           	escreva("\n\n▶ Deseja continuar? ")
           	leia(resposta)
-			
+          	
+			enquanto(resposta != 'N' e resposta != 'n' e resposta != 'S' e resposta != 's'){
+				escreva("\nOpção Inválida, verifique e digite novamente:  ")
+				leia(resposta)
+			}
 			
           	se(resposta == 'N' ou resposta == 'n') {
           	escreva("\n▶ Deseja alterar a compra? ")
           	leia(resposta)
          		}
-         		
+         		enquanto(resposta != 'N' e resposta != 'n' e resposta != 'S' e resposta != 's'){
+				escreva("\nOpção Inválida, verifique e digite novamente:  ")
+				leia(resposta)
+			}
           	
           } enquanto(resposta == 'S' ou resposta == 's')
 
@@ -145,11 +164,11 @@ programa
           }
 
 		faca{
-			escreva("\n____________________________________________________________________________\n")
+			escreva("\n________________________________________________________________________________\n")
 			escreva("\n\t\t\t\t   LAIKA FAST\n")
-			escreva("____________________________________________________________________________\n")
+			escreva("\n________________________________________________________________________________\n")
 			escreva("\n|Valor total da compra: R$ ",valorCompra,", 9% de imposto sob o valor corresponde a R$",mat.arredondar((valorCompra * 0.09),2),"|")
-			escreva("\n____________________________________________________________________________\n")
+			escreva("\n________________________________________________________________________________\n")
 			escreva("\n\n▶ Qual seu nome? ")
 			leia(nome)
 			
@@ -169,9 +188,9 @@ programa
 				caso 1:
 				b = 1
 				escreva("\n\n______________________________________________________________________________________________________________\n") 
-				escreva("\t\t\t\t\tLAIKA FAST")
+				escreva("\t\t\tLAIKA FAST")
           		escreva("\n\n______________________________________________________________________________________________________________\n") 
-				escreva("\t\t\t\t\tNOTA FISCAL")
+				escreva("\t\t\t\t\t\tNOTA FISCAL")
 				escreva("\n______________________________________________________________________________________________________________\n")
 				escreva("\t\t\tNOME:\t",nome,"\t|\tCPF:\t",cpf,"|\n")
 				escreva("______________________________________________________________________________________________________________\n")
@@ -191,9 +210,9 @@ programa
 	
 				caso 2:
 				escreva("\n\n______________________________________________________________________________________________________________\n") 
-				escreva("\t\t\t\t\tLAIKA FAST")
+				escreva("\t\t\tLAIKA FAST")
           		escreva("\n\n______________________________________________________________________________________________________________\n") 
-				escreva("\t\t\t\t\tNOTA FISCAL")
+				escreva("\t\t\t\t\t\tNOTA FISCAL")
 				escreva("\n______________________________________________________________________________________________________________\n")
 				escreva("\t\t\tNOME:\t",nome,"\t|\tCPF:\t",cpf,"|\n")
 				escreva("______________________________________________________________________________________________________________\n")
@@ -215,9 +234,9 @@ programa
 
           		caso 3:
           		escreva("\n\n______________________________________________________________________________________________________________\n") 
-				escreva("\t\t\t\t\tLAIKA FAST")
+				escreva("\t\t\tLAIKA FAST")
           		escreva("\n\n______________________________________________________________________________________________________________\n") 
-				escreva("\t\t\t\t\tNOTA FISCAL")
+				escreva("\t\t\t\t\t\tNOTA FISCAL")
 				escreva("\n______________________________________________________________________________________________________________\n")
 				escreva("\t\t\tNOME:\t",nome,"\t|\tCPF:\t",cpf,"|\n")
 				escreva("______________________________________________________________________________________________________________\n")
@@ -241,17 +260,14 @@ programa
 			}
 
 		}enquanto(a<b) 
-	/*	
-	valorCod[x]
-	contador
-	endereco[x]
-	valorCompra
-	*/
-	// Caso "resposta = N": Encerra o programa
      } senao{
      	escreva("\nAté breve!! ")
        }escreva("\n▶ Deseja comprar novamente? ")
        leia (resposta)
+       enquanto(resposta != 'N' e resposta != 'n' e resposta != 'S' e resposta != 's'){
+				escreva("\nOpção Inválida, verifique e digite novemente:  ")
+				leia(resposta)
+			}
     	}enquanto(resposta=='s' ou resposta=='S')
     }
 }
@@ -260,9 +276,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 5951; 
+ * @POSICAO-CURSOR = 5837; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
+ * @SIMBOLOS-INSPECIONADOS = {estoque, 9, 13, 7};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */

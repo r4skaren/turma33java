@@ -21,7 +21,7 @@ programa
 		dias = (diasNascimento%365)%30
 
 		//saidas
-		escreva("Sua idade é "+idade+", você nasceus no mês "+mes+" no dia "+dias)
+		escreva("Sua idade é "+idade+", você nasceu no mês "+mes+" no dia "+dias)
 		
 	}
 }
@@ -31,7 +31,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 198; 
+ * @POSICAO-CURSOR = 511; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
