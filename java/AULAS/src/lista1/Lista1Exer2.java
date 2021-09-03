@@ -2,8 +2,7 @@ package lista1;
 
 import java.util.Scanner;
 
-public class SistemaLeiaIdade {
-
+public class Lista1Exer2 {
 	/*2. Faça um sistema que leia a idade de uma pessoa expressa em dias e mostre-a
 	expressa em anos, meses e dias.
 	 */
@@ -24,3 +23,4 @@ public class SistemaLeiaIdade {
 		System.out.println("Você tem"+ anos +" anos, " +meses+ " meses e " + dias + " dias de idade!");
 	}
 }
+

@@ -2,8 +2,8 @@ package lista1;
 
 import java.util.Scanner;
 
-public class SistemaLeiaDias {
-	
+public class Lista1Exer1 {
+
 	/*1. Faça um sistema que leia a idade de uma pessoa expressa 
 	 * em anos, meses e dias e mostre-a expressa apenas em dias.
 	 */
@@ -30,3 +30,4 @@ public class SistemaLeiaDias {
 	}
 
 }
+

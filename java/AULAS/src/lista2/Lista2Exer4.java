@@ -2,13 +2,14 @@ package lista2;
 
 import java.util.Scanner;
 
+
 /*4 - Faça um programa em que permita a entrada de um número 
  * qualquer e exiba se este número é par ou ímpar. 
  * Se for par exiba também a raiz quadrada do mesmo; 
  * se for ímpar exiba o número elevado ao quadrado.
  * 
  */
-public class ImparParRaiz {
+public class Lista2Exer4 {
 	
 		public static void main(String[] args) {
 			Scanner leia = new Scanner(System.in);
@@ -36,5 +37,6 @@ public class ImparParRaiz {
 				resultado=Math.pow((numero),2);
 				System.out.println(numero+" elevado ao quadrado é igual a: "+resultado);
 			}
-		}
 	}
+}
+
