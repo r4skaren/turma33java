@@ -1,3 +1,4 @@
+//Felipe
 programa
 {
 	inclua biblioteca Texto --> txt
@@ -52,6 +53,7 @@ programa
         	}
         	escreva("\n________________________________________________________\n")
      	escreva("\n")
+//Ilana
 
           // Imprime tabela de produtos
           para(inteiro x=0;x<10;x++) {
@@ -105,11 +107,11 @@ programa
           				carrinhoQuantidade[enderecoCarrinho] = quantidade
           				contador--
           				}senao{	
-          											
+       											
           				escreva("\n▶ Digite a quantidade: ")
           				leia(quantidade)
           				
-
+//Matheus
                   		enquanto(quantidade > estoque[enderecoCarrinho] ou quantidade<=0){
                   			escreva("\nQuantidade indisponíveL, verifique e tente novamente.")
                   			escreva("\n▶ Digite a quantidade: ")
@@ -162,7 +164,7 @@ programa
           para (inteiro x=0;x<10;x++){
           	estoque[x] = estoque[x] -endereco[x]
           }
-
+//Karen
 		faca{
 			escreva("\n________________________________________________________________________________\n")
 			escreva("\n\t\t\t\t   LAIKA FAST\n")
@@ -231,7 +233,7 @@ programa
           		escreva("\n\t                        AGRADECEMOS PELA PREFERÊNCIA! VOLTE SEMPRE!                                            \n")
           		escreva("\n______________________________________________________________________________________________________________\n")
           		pare
-
+//Juan
           		caso 3:
           		escreva("\n\n______________________________________________________________________________________________________________\n") 
 				escreva("\t\t\tLAIKA FAST")
@@ -276,9 +278,9 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 5837; 
+ * @POSICAO-CURSOR = 11259; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = {estoque, 9, 13, 7};
+ * @SIMBOLOS-INSPECIONADOS = {estoque, 10, 13, 7};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
