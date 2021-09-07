@@ -9,6 +9,9 @@ public class FaseTeste {
 
 	public static void main(String[] args) {
 
+		//AVISO = para que seu console apresente a melhor performace de design
+		//configure a fonte do seu console para verdana/regular/14
+		
 		Scanner leia = new Scanner(System.in);	
 		
 		Locale.setDefault(Locale.US);
