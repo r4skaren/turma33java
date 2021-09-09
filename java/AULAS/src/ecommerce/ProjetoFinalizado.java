@@ -2,7 +2,6 @@ package ecommerce;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class ProjetoFinalizado {
@@ -14,7 +13,6 @@ public class ProjetoFinalizado {
 		
 		Scanner leia = new Scanner(System.in);	
 		
-		Locale.setDefault(Locale.US);
 		
 		// data/hora atual
 		LocalDateTime data = LocalDateTime.now();
