@@ -8,8 +8,8 @@ public class Lista4Exer3 {
 		public boolean ligado;
 		
 	//atributos de classe>
-	public int bateriaFone;
-	public int bateriaCelular1;
+		public int bateriaFone;
+		public int bateriaCelular1;
  
 	
 	//celular ligado, desligado
@@ -29,7 +29,6 @@ public class Lista4Exer3 {
 		if(bateriaFone <= 15) {
 			System.out.println("Bateria está descarregando!!");
 		}
-			
 		
 		else if (bateriaFone == 0) {
 			System.out.println("Bateria descarregada!");

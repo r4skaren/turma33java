@@ -25,11 +25,13 @@ public static void main(String[] args) {
 		System.out.print("Entre com o valor da sua bateria: ");
 		eletronico1.bateriaCelular1 = leia.nextInt();
 		eletronico1.bateriaCelular();
+		eletronico1.celuLigado();
 		
 		System.out.println("\nEletrônico 2 tem a cor: "+eletronico2.cor+"\nSua marca é: "+eletronico2.marca);
 		System.out.print("Entre com o valor da sua bateria: ");
 		eletronico2.bateriaFone = leia.nextInt();
 		eletronico2.bateriaFone();
+		eletronico2.celuDesligado();		
 		
-}
+	}
 }
