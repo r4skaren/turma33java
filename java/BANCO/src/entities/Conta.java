@@ -3,10 +3,11 @@ package entities;
 public class Conta {
 
 	//atributos
-		private int numero;
+		protected int numero;
 		private String cpf;
-		private double saldo;
+		protected double saldo;
 		private boolean ativo;
+	
 		
 		//construtor
 
@@ -79,6 +80,8 @@ public class Conta {
 		public String toString() {
 			return "Conta numero=" + numero + ", cpf=" + cpf + ", saldo=" + saldo ;
 		}
+
 		
-		
+
+	
 }

@@ -2,29 +2,23 @@ package classes;
 
 public class Lista5Exer1Cavalo extends Lista5Exer1Animal implements Lista5Exer1Treinamento{
 
-	
-	public Lista5Exer1Cavalo(String nome, int idade) {
-		super(nome, idade);
-		// TODO Auto-generated constructor stub
-	}
-	public void correr() {
-		System.out.println("Cavalo correndo....");
-	}
-	@Override 
-	public void emitirSom() {
-		System.out.println("Irccccc irccccc.");
-	}
+		private String corrida;
 
-	@Override
-	public void rolarChao() {
-		// TODO Auto-generated method stub
-		
-	}
+		public Lista5Exer1Cavalo(String nome, int idade,  String som, String corrida)
+	    {
+	    	super(nome, idade, som, corrida);
+	    	
+	    }
 
-	@Override
-	public void emDuasPatas() {
-		System.out.println("Cavalo em duas patas....");
-		
-	}
-	
+		@Override
+		public void rolarChao() {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void emDuasPatas() {
+			// TODO Auto-generated method stub
+			
+		}
 }

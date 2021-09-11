@@ -6,34 +6,7 @@ public class ContaEstudantil extends Conta {
 	
 				//atributos
 				private double limiteEstudantil = 5000;
-				private double emprestimo;
-				
-				//atributos
-				private int diaAniversarioPoupanca;
-				
-				//construtores
-				public ContaEstudantil(int numero, String cpf, int diaAniversarioPoupanca) {
-					super(numero, cpf);
-					this.diaAniversarioPoupanca = diaAniversarioPoupanca;
-				}
-				
-				//encapsulamento
-				public int getDiaAniversarioPoupanca() {
-					return diaAniversarioPoupanca;
-				}
 
-				public void setDiaAniversarioPoupanca(int diaAniversarioPoupanca) {
-					this.diaAniversarioPoupanca = diaAniversarioPoupanca;
-				} 
-				
-				//metodos
-				public void correcao(int diaInformado) {
-					double valorCorrecao;
-					if (diaInformado == this.diaAniversarioPoupanca) {
-						valorCorrecao = (super.getSaldo() * 0.005);
-						super.credito(valorCorrecao);
-					}
-				}
 							
 				//construtores
 				public ContaEstudantil(int numero, String cpf, double limiteEstudantil) {
@@ -53,11 +26,10 @@ public class ContaEstudantil extends Conta {
 				}
 				
 				//metodos
-				public void usarEstudantil(int emprestimo) {
-					if (emprestimo <= this.limiteEstudantil) {
-						super.saldo = super.getSaldo() + emprestimo;
-						
+				public void usarEstudantil(double valorEmprestimo) {
+					if(valorEmprestimo <= limiteEstudantil) {
+						this.limiteEstudantil = limiteEstudantil - valorEmprestimo;
+						super.credito(valorEmprestimo);
 					}
 				}
-				
 }

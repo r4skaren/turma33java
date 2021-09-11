@@ -4,7 +4,7 @@ package classes;
 
 	
 		public Lista5Exer1Preguica(String nome, int idade) {
-			super(nome, idade);
+			super(nome, idade, nome, nome);
 			// TODO Auto-generated constructor stub
 		}
 
