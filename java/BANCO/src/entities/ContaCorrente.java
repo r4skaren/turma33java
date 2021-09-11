@@ -21,11 +21,16 @@ public class ContaCorrente extends Conta {
 					this.contadorTalao = contadorTalao;
 				}
 				//metodos
-				public void pediTalao(int qtd)
-				{
-					if(qtd <= 3) {
-						this.contadorTalao = contadorTalao * qtd;
-						super.debito(qtd);
-					}
-				}		
+				public void cheque() {
+			        if(contadorTalao<3) {
+			            if(super.getSaldo()>=30.00) {
+			                super.debito(30);
+			                contadorTalao++;
+			            } else {
+			            	System.out.println("Saldo insuficiente.");
+			            }
+			        } else {
+			        	System.out.println("Limite máximo (3) excedido.");
+			        }	
+				}
 }
