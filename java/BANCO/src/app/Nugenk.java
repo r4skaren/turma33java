@@ -1,6 +1,7 @@
 package app;
 
 import java.util.Scanner;
+
 import entities.ContaCorrente;
 import entities.ContaEmpresa;
 import entities.ContaEspecial;
@@ -26,25 +27,31 @@ public class Nugenk {
 		char resposta1;
 		//poupança - dia aniver
 		int dia;
+		//caso 3
+		double valorMovimento;
 		//caso 5 
 		double emprestimoEstu;
+
 
 		//
 		Scanner leia = new Scanner(System.in);
 		// Classes contas
-		ContaEstudantil cest1 = new ContaEstudantil(14, "123.456.789-55", 10000);
 		ContaPoupanca cp1 = new ContaPoupanca(156, "222.333.444-58", 5);
 		ContaCorrente cc1 = new ContaCorrente(147, "147.258.369-98", 3);
 		ContaEspecial cesp1 = new ContaEspecial(148, "369.258.147", 3, 1000);
-		ContaEmpresa cemp1 = new ContaEmpresa(123, "159753852.99", 50000);
+		ContaEmpresa cemp1 = new ContaEmpresa(123, "159753852.99", 10000);
+		ContaEstudantil cest1 = new ContaEstudantil(14, "123.456.789-55", 5000);
 
 		while (respostaUsarConta == 's') {
 			System.out.print("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃\n");
-			System.out.print("\n\n NUGENK G3");
-			System.out.print("\n\n\tRevolucionando sua vida financeira!");
-			System.out.println("Qual tipo de conta deseja acessar?");
-			System.out.println("\n 1 - Poupança" + "\n 2 - Corrente" + "\n 3 - Especial" + "\n 4 - Empresa"
-					+ "\n 5 - Estudantil" + "\n 6 - Sair");
+			System.out.print("\n\n\t\t\t\t\t                                     NUGENK G3");
+			System.out.print("\n\n\t\t\t\t                       Transparência e revolução em sua vida financeira!");
+			System.out.println("\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅");
+			System.out.println("\n\n\t\tQual tipo de conta deseja acessar?");
+			System.out.println("\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅");
+			System.out.println("\n\t\t 1 - Poupança" + "\n\t\t 2 - Corrente" + "\n\t\t 3 - Especial" + "\n\t\t 4 - Empresa"
+					+ "\n\t\t 5 - Estudantil" + "\n\t\t 6 - Sair");
+			System.out.println("\n┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅┅");
 			System.out.print("\n\n\t\t\t\t☛ Digite aqui: ");
 			respostaContas = leia.nextInt();
 
@@ -55,14 +62,18 @@ public class Nugenk {
 				// Movimento
 				System.out.print("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃\n");
 				System.out.print("\n\t\tNUGENK");
-				System.out.print("\n\n\t\tO melhor lugar para revolucionar sua vida financeira!");
-
+				System.out.print("\n\n\t\tTransparência e revolução em sua vida financeira!\n");
+				System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+				System.out.print("\t\t↣ CONTA POUPANÇA\n");
+				// Movimento
 				for (int x = 1; x <= 10; x++) {
-					System.out.println("MOVIMENTO " + x);
-					System.out.println("SALDO ATUAL R$ :" + cp1.getSaldo());
-					System.out.print("Movimento D - Débito ou C - Crédito? ");
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.println("\t\tSaldo Atual: R$ " + cp1.getSaldo());
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.println("\n\t\t"+x+"° movimento: ");
+					System.out.print("\n\t\tTipos de movimento: \n\t\tD para Débito  \n\t\tC para Crédito \n\n\t\t☞ Digite aqui: ");
 					tipo = leia.next().toUpperCase().charAt(0);
-					System.out.print("Digite o valor :");
+					System.out.print("\n\t\tDigite o valor: ");
 					valor = leia.nextDouble();
 
 					if (tipo == 'D') {
@@ -70,35 +81,41 @@ public class Nugenk {
 					} else if (tipo == 'C') {
 						cp1.credito(valor);
 					} else {
-						System.out.println("Não foi informado um tipo correto...");
+						System.out.println("\n\t\tNão foi informado um tipo correto...");
 					}
-					System.out.println("Continua S/N : ");
+					System.out.print("\n\t\tContinuar? (S/N): ");
 					op = leia.next().toUpperCase().charAt(0);
 					if (op == 'N') {
 						break;
 					}
+				
 					// Conta Poupança
-					System.out.println("SALDO ATUALIZADO R$ " + cp1.getSaldo());
-					System.out.println("Informe o dia de hoje:");
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.println("\n\t\tSaldo atual: R$ " + cp1.getSaldo());
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.print("\n\t\tInforme o dia de hoje:");
 					dia = leia.nextInt();
 					cp1.correcao(dia);
-					System.out.println("SALDO FINAL R$ " + cp1.getSaldo());
+					System.out.print("\n\t\tSALDO FINAL: R$ " + cp1.getSaldo());
 				}
+
 				break;
 
 			case 2:
-				System.out
-						.print("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃\n");
+				System.out.print("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃\n");
 				System.out.print("\n\t\tNUGENK");
-				System.out.print("\n\n\t\tO melhor lugar para revolucionar sua vida financeira!");
-
+				System.out.print("\n\n\t\tTransparência e revolução em sua vida financeira!!\n");
+				System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+				System.out.print("\t\t↣ CONTA CORRENTE\n");
+				// Movimento
 				for (int x = 1; x <= 10; x++) {
-
-					System.out.println("MOVIMENTO " + x);
-					System.out.println("SALDO ATUAL R$ :" + cc1.getSaldo());
-					System.out.print("Movimento D - Débito ou C - Crédito? ");
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.println("\t\tSaldo Atual: R$ " + cc1.getSaldo());
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.println("\n\t\t"+x+"° movimento: ");
+					System.out.print("\n\t\tTipos de movimento: \n\t\tD para Débito  \n\t\tC para Crédito \n\n\t\t☞ Digite aqui: ");
 					tipo = leia.next().toUpperCase().charAt(0);
-					System.out.print("Digite o valor :");
+					System.out.print("\n\t\tDigite o valor: ");
 					valor = leia.nextDouble();
 
 					if (tipo == 'D') {
@@ -106,47 +123,44 @@ public class Nugenk {
 					} else if (tipo == 'C') {
 						cc1.credito(valor);
 					} else {
-						System.out.println("Não foi informado um tipo correto...");
+						System.out.println("\n\t\tNão foi informado um tipo correto...");
 					}
-					System.out.println("Continua S/N : ");
+					System.out.println("\n\t\tContinuar (S/N)?");
 					op = leia.next().toUpperCase().charAt(0);
 					if (op == 'N') {
 						break;
 					}
-					// Conta Corrente
-					System.out.println("SALDO ATUALIZADO R$ " + cc1.getSaldo());
-					System.out.println("Deseja solicitar chegue (S/N)? ");
-					resposta1 = leia.next().toUpperCase().charAt(0);
-					System.out.println("Deseja retirar um talão de cheque?"
-							+ "\nLIMITE MÁXIMO DE 3 TALÕES."
-							+ "\nVALOR POR TALÃO: R$ 30.00");
-					resposta1 = leia.next().toUpperCase().charAt(0);
-					if(resposta1 == 'S') {
-						cc1.cheque();
-						System.out.println("SALDO ATUAL R$ :"+cc1.getSaldo());	
-						System.out.println("Cheques retirados: "+ cc1.getContadorTalao());
-					}
-					if (resposta1 == 'S') {
-						cc1.cheque();
-						System.out.println("SALDO ATUALIZADO R$ " + cc1.getSaldo());						
-						System.out.println("Cheques retirados: "+ cc1.getContadorTalao());
-					}
 				}
+					//Conta Corrente
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.println("\n\t\tSaldo atual: R$ " + cp1.getSaldo());
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.println("\n\t\tOPORTUNIDADE ÚNICA! \n\t\tEstá disponível 3 talões no valor de R$30,00!");
+		            System.out.println("\n\t\tDeseja solicitar? (S/N): ");
+		            resposta1 = leia.next().toUpperCase().charAt(0);
+		            if(resposta1 == 'S') {
+						cc1.talao(resposta1);
+						System.out.println("\n\t\tSaldo atualizado: R$ "+cc1.getSaldo());	
+						System.out.println("\n\t\tCheques retirados: "+ cc1.getContadorTalao());
+					}
 				break;
-
+				
 			case 3:
-				System.out
-						.print("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃\n");
+				System.out.print("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃\n");
 				System.out.print("\n\t\tNUGENK");
-				System.out.print("\n\n\t\tO melhor lugar para revolucionar sua vida financeira!");
-
+				System.out.print("\n\n\t\tTransparência e revolução em sua vida financeira!\n");
+				System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+				System.out.print("\t\t↣ CONTA ESPECIAL\n");
+				// Movimento
 				for (int x = 1; x <= 10; x++) {
-
-					System.out.println("MOVIMENTO " + x);
-					System.out.println("SALDO ATUAL R$ :" + cesp1.getSaldo());
-					System.out.print("Movimento D - Débito ou C - Crédito? ");
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.println("\n\t\tSaldo Atual: R$ " + cp1.getSaldo());
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.println("\n\t\t"+x+"° movimento: ");
+					System.out.println("\n\t\tSaldo inicial: R$ " + cp1.getSaldo());
+					System.out.print("\n\t\tTipos de movimento: \n\t\tD para Débito  \n\t\tC para Crédito \n\n\t\t☞ Digite aqui: ");
 					tipo = leia.next().toUpperCase().charAt(0);
-					System.out.print("Digite o valor :");
+					System.out.print("\n\t\tDigite o valor: ");
 					valor = leia.nextDouble();
 
 					if (tipo == 'D') {
@@ -154,39 +168,46 @@ public class Nugenk {
 					} else if (tipo == 'C') {
 						cesp1.credito(valor);
 					} else {
-						System.out.println("Não foi informado um tipo correto...");
+						System.out.println("\n\t\tNão foi informado um tipo correto...");
 					}
-					System.out.println("Continua S/N : ");
+					System.out.print("\n\t\tContinuar? (S/N): ");
 					op = leia.next().toUpperCase().charAt(0);
 					if (op == 'N') {
 						break;
 					}
+					// Conta Especial
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.println("\n\t\tSaldo atual: R$ " + cp1.getSaldo());
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					if(cesp1.getSaldo() < 0) {
+					System.out.print("\n\t\tSeu saldo se encontra no valor de: ");
+					System.out.print("\n\t\tPara continuar a movimentação é necasário que você utilize o seu limite especial.");
+					System.out.print("\n\t\tDigite o valor desejado: ");
+					valorMovimento = leia.nextDouble();
+					cesp1.usarLimite(valorMovimento);
+					}
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.println("\n\t\tSaldo atual: R$ " + cp1.getSaldo());
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
 				}
-				// Conta Especial ///não faço ideia
-				/*
-				 * if(setSaldo(0));
-				 * 
-				 * System.out.println("SALDO ATUALIZADO R$ "+cesp1.getSaldo()); resposta1 =
-				 * leia.next().toUpperCase().charAt(0); if(resposta1 == 'S') {
-				 * System.out.println("Quantos Talões você deseja solicitar?"); cheque =
-				 * leia.nextInt(); cesp1.talao(cheque); System.out.println("SALDO FINAL R$ " +
-				 * cesp1.getSaldo()); } } break;
-				 */
-
+			break;
+				 
 			case 4:
-				System.out
-						.print("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃\n");
+				System.out.print("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃\n");
 				System.out.print("\n\t\tNUGENK");
-				System.out.print("\n\n\t\tO melhor lugar para revolucionar sua vida financeira!");
-
+				System.out.print("\n\n\t\tTransparência e revolução em sua vida financeira!\n");
+				System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+				System.out.print("\t\t↣ CONTA EMPRESA\n");
 				// Movimento
 				for (int x = 1; x <= 10; x++) {
-
-					System.out.println("MOVIMENTO " + x);
-					System.out.println("SALDO ATUAL R$ :" + cemp1.getSaldo());
-					System.out.print("Movimento D - Débito ou C - Crédito? ");
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.println("\t\tSaldo Atual: R$ " + cp1.getSaldo());
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.println("\n\t\t"+x+"° movimento: ");
+					System.out.println("\n\t\tSaldo inicial: R$ " + cp1.getSaldo());
+					System.out.print("\n\t\tTipos de movimento: \n\t\tD para Débito  \n\t\tC para Crédito \n\n\t\t☞ Digite aqui: ");
 					tipo = leia.next().toUpperCase().charAt(0);
-					System.out.print("Digite o valor: ");
+					System.out.print("\n\t\tDigite o valor: ");
 					valor = leia.nextDouble();
 
 					if (tipo == 'D') {
@@ -194,75 +215,82 @@ public class Nugenk {
 					} else if (tipo == 'C') {
 						cemp1.credito(valor);
 					} else {
-						System.out.println("Não foi informado um tipo correto...");
+						System.out.println("\n\t\tNão foi informado um tipo correto...");
 					}
-					System.out.println("Continua S/N : ");
-					op = leia.next().toUpperCase().charAt(0);
-					if (op == 'N') {
-						break;
-					}
-					// Conta Empresa
-					System.out.printf("\nVocê tem um empréstimo no valor de R$ %.2f aprovado, deseja utilizar?"
-							+ "\nS - Sim" + "\nN- Não\n", cemp1.getEmprestimoEmpresa());
-					resposta1 = leia.next().toUpperCase().charAt(0);
-					if (resposta1 == 'S') {
-						System.out.println("Qual o valor do empréstimo?");
-						valor = leia.nextDouble();
-						cemp1.pedirEmprestimo(valor);
-					}
-					System.out.println("Continuar (S/N)? ");
-					resposta1 = leia.next().toUpperCase().charAt(0);
-					if (resposta1 == 'N') {
-						break;
-					}
-
-				}
-			case 5:
-				System.out.print("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃\n");
-				System.out.print("\n\t\tNUGENK");
-				System.out.print("\n\n\t\tO melhor lugar para revolucionar sua vida financeira!");
-
-				// Movimento
-				for (int x = 1; x <= 10; x++) {
-
-					System.out.println("MOVIMENTO " + x);
-					System.out.println("SALDO ATUAL R$ :" + cest1.getSaldo());
-					System.out.print("Movimento D - Débito ou C - Crédito? ");
-					tipo = leia.next().toUpperCase().charAt(0);
-					System.out.print("Digite o valor: ");
-					valor = leia.nextDouble();
-
-					if (tipo == 'D') {
-						cest1.debito(valor);
-					} else if (tipo == 'C') {
-						cest1.credito(valor);
-					} else {
-						System.out.println("Não foi informado um tipo correto...");
-					}
-					System.out.println("Continua S/N : ");
+					System.out.print("\n\t\tContinuar? (S/N): ");
 					op = leia.next().toUpperCase().charAt(0);
 					if (op == 'N') {
 						break;
 					}
 					// Conta Estudantil
-					System.out.println("SALDO ATUALIZADO R$ " + cest1.getSaldo());
-					System.out.println("SALDO FINAL R$ " + cest1.getSaldo());
-					System.out.println("\nO empréstimo Estudantil de 5k, está disponivel!");
-					System.out.println("Deseja solicitar? (S/N): ");
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.print("\n\t\tSaldo Atual: R$ " + cemp1.getSaldo());
+					System.out.print("\n༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.print("\n\t\tO empréstimo estudantil de "+cemp1.getEmprestimoEmpresa()+" está disponivel!");
+					System.out.print("\n\t\tDeseja solicitar? (S/N): ");
 					resposta1 = leia.next().toUpperCase().charAt(0);
 					if (resposta1 == 'S') {
-						System.out.println("Entre com valor que deseja solicitar: ");
+						System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+						System.out.print("\n\t\tEntre com valor que deseja solicitar: ");
 						emprestimoEstu = leia.nextDouble();
-						cest1.usarEstudantil(emprestimoEstu);
-						System.out.println("SALDO FINAL R$ " + cest1.getSaldo());
+						cemp1.pedirEmprestimo(emprestimoEstu);
+						System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+						System.out.println("\n\n\t\tSALDO FINAL R$ " + cemp1.getSaldo());
+					} 
+
+				}
+			case 5:
+				System.out.print("▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃▃\n");
+				System.out.print("\n\t\tNUGENK");
+				System.out.print("\n\n\t\tTransparência e revolução em sua vida financeira!\n");
+				System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+				System.out.print("\t\t↣ CONTA EATUDANTIL\n");
+				// Movimento
+				for (int x = 1; x <= 10; x++) {
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.println("\t\tSaldo Atual: R$ " + cp1.getSaldo());
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.println("\n\n\t\t"+x+"° movimento: ");
+					System.out.println("\n\t\tEscolha um movimento\n");
+					System.out.print("\t\tTipos de movimento: \n\t\tD para Débito  \n\t\tC para Crédito \n\n\t\tDigite aqui: ");
+					tipo = leia.next().toUpperCase().charAt(0);
+					System.out.print("\n\t\tDigite o valor: ");
+					valor = leia.nextDouble();
+					
+					if (tipo == 'D') {
+						cest1.debito(valor);
+					} else if (tipo == 'C') {
+						cest1.credito(valor);
 					} else {
-						System.out.println("Obrigade por utilizar nossos serviços!");
+						System.out.println("\n\t\tNão foi informado um tipo correto...");
+					}
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.print("\n\t\tSaldo atualizado para: R$ "+ cest1.getSaldo()+"\n");
+					System.out.print("\n\n\t\tDeseja continuar? (S/N): ");
+					op = leia.next().toUpperCase().charAt(0);
+					if (op == 'N') {
+						break;
 					}
 				}
-			case 6:
+					// Conta Estudantil
+					System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.print("\n\t\tSaldo Atual: R$ " + cest1.getSaldo());
+					System.out.print("\n༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+					System.out.print("\n\t\tO empréstimo estudantil de "+cest1.getLimiteEstudantil()+" está disponivel!");
+					System.out.print("\n\t\tDeseja solicitar? (S/N): ");
+					resposta1 = leia.next().toUpperCase().charAt(0);
+					if (resposta1 == 'S') {
+						System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+						System.out.print("\n\t\tEntre com valor que deseja solicitar: ");
+						emprestimoEstu = leia.nextDouble();
+						cest1.usarEstudantil(emprestimoEstu);
+						System.out.print("༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝༝\n");
+						System.out.println("\n\n\t\tSALDO FINAL R$ " + cest1.getSaldo());
+					} 
 				
-				System.out.println("OBRIGADO, VOLTE SEMPRE!");
-				respostaContas = 6;
+			case 6:
+				System.out.println("\n\n\t\t【VOLTE SEMPRE!】");
+				respostaContas = 'n';
 				break;
 			}
 		}

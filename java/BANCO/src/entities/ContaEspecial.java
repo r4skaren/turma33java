@@ -25,5 +25,5 @@ public class ContaEspecial extends ContaCorrente {
 			public void usarLimite(double valor) {
 				this.limite = this.limite - valor;
 				super.credito(valor);
-			}
+			}	
 }

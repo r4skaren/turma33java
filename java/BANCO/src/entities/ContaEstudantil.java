@@ -1,12 +1,15 @@
 package entities;
 
+import java.util.Scanner;
+
 public class ContaEstudantil extends Conta {
 				
 	//super liga com a mãe
 	
 				//atributos
-				private double limiteEstudantil = 5000;
-
+				private double limiteEstudantil;
+				private String resposta;
+				
 							
 				//construtores
 				public ContaEstudantil(int numero, String cpf, double limiteEstudantil) {
@@ -29,7 +32,10 @@ public class ContaEstudantil extends Conta {
 				public void usarEstudantil(double valorEmprestimo) {
 					if(valorEmprestimo <= limiteEstudantil) {
 						this.limiteEstudantil = limiteEstudantil - valorEmprestimo;
-						super.credito(valorEmprestimo);
+						super.credito(saldo+valorEmprestimo);
+					}
+					else if(valorEmprestimo > limiteEstudantil) {
+						System.out.print("O valor desejado é maior que o limite disponível!");
 					}
 				}
 }

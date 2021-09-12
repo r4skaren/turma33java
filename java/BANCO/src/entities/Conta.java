@@ -2,7 +2,7 @@ package entities;
 
 public class Conta {
 
-	//atributos
+		//atributos
 		protected int numero;
 		private String cpf;
 		protected double saldo;
@@ -10,7 +10,6 @@ public class Conta {
 	
 		
 		//construtor
-
 		public Conta(int numero, String cpf) {
 			super();
 			this.numero = numero;
@@ -59,20 +58,19 @@ public class Conta {
 		public void debito(double valor) {
 			
 			if (valor == 0) {
-				System.out.println("Debito vazio, impossivel realizar...");
+				System.out.println("\n\t\tDébito vázio, impossível realizar...");
 			}
 			else if(valor < 0) {
-				System.out.println("Valor informado negativo, impossivel realizar...");
+				System.out.println("\n\t\tValor informado negativo, impossível realizar...");
 			}
 			else if (valor > saldo) {
-				System.out.println("Saldo insulficiente, impossivel realizar...");
+				System.out.println("\n\t\tSaldo insulficiente, impossível realizar...");
 			} 
 			else {
 				saldo -= valor;
 			}
 			
-			//saldo = saldo - valor;
-			
+			//saldo = saldo - valor;	
 		}
 		
 		//seja o que Deus quiser....
@@ -80,8 +78,4 @@ public class Conta {
 		public String toString() {
 			return "Conta numero=" + numero + ", cpf=" + cpf + ", saldo=" + saldo ;
 		}
-
-		
-
-	
 }
