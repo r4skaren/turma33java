@@ -3,7 +3,7 @@ package entities;
 public class ContaEmpresa extends Conta{
 	
 		//atributos
-		private	double	emprestimoEmpresa = 10000;
+		private	double	emprestimoEmpresa;
 	
 		//construtores
 		public ContaEmpresa(int numero, String cpf, double emprestimoEmpresa) {
@@ -31,13 +31,12 @@ public class ContaEmpresa extends Conta{
 		}*/
 		public void pedirEmprestimo(double emprestimo)
 		{
-			if(emprestimo > emprestimoEmpresa) {
+			if(emprestimo <= emprestimoEmpresa) {
 			this.emprestimoEmpresa -= emprestimo;
 			super.credito(emprestimo);
-			System.out.println("Saldo atual emprestimo R$ "+this.emprestimoEmpresa);
-			System.out.println("Emprestimo realizado com sucesso.\nSaldo atualizado: R$ " + super.getSaldo());
+			}
+			else if(emprestimo > emprestimoEmpresa) {
+				System.out.print("O valor desejado é maior que o limite disponível!");
 			}
 		}
-			
-	
 }

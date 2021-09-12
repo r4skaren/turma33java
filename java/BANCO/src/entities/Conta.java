@@ -76,6 +76,6 @@ public class Conta {
 		//seja o que Deus quiser....
 		@Override
 		public String toString() {
-			return "Conta numero=" + numero + ", cpf=" + cpf + ", saldo=" + saldo ;
+			return "\n\t\tConta numero =" + numero + ", cpf=" + cpf + ", saldo=" + saldo ;
 		}
 }
