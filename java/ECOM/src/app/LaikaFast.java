@@ -36,12 +36,14 @@ public class LaikaFast {
 		String cpf;
 		LocalDateTime data = LocalDateTime.now();
 		char respostaLoop = 'S';
-
+		int contador = 0;
 
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
 		String dataFormatada = data.format(formatter);
 
+		formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
+		
 		String dataFormatado = data.format(formatter);
 
 		List<Produto> cadastro = new ArrayList<>();
@@ -84,7 +86,7 @@ public class LaikaFast {
 						System.out.print("\n\t\t\t☛ Digite o codigo do produto que deseja comprar ou alterar: ");
 						auxCod = leia.next().toUpperCase();
 						auxIndice = 0;
-						
+
 						while (! auxCod.equals( "G4-01") && ! auxCod.equals( "G4-02") && ! auxCod.equals( "G4-03") && ! auxCod.equals( "G4-04") && ! auxCod.equals( "G4-05") && ! auxCod.equals( "G4-06") && ! auxCod.equals( "G4-07")
 						&& ! auxCod.equals( "G4-08") && ! auxCod.equals( "G4-09") && ! auxCod.equals( "G4-10")) {
 							System.out.print("\n\t\t\t"+"⌦ Código Inválido, verifique e digite novamente: ");
@@ -97,6 +99,7 @@ public class LaikaFast {
 							}
 							auxIndice++;
 						}
+						
 						if (cadastro.size() == auxIndice) {
 							System.out.println("\n\t\t\tItem não encontrado");
 							break;
@@ -114,7 +117,7 @@ public class LaikaFast {
 						}
 
 						if (validador) {
-							System.out.println("\n\t\t\t☛Quanto deseja comprar :");
+							System.out.println("\n\t\t\t☛ Quanto deseja comprar :");
 							auxQtde = leia.nextInt();
 							while (auxQtde > cadastro.get(auxIndice).getEstoque() || auxQtde <= 0) {
 								System.out.print("\n\t\t\t⌦ Quantidade indisponível, verifique e tente novamente.");
@@ -125,6 +128,7 @@ public class LaikaFast {
 							// carrinho.add(new
 							// Produto(cadastro.get(auxIndice).getCodigo(),cadastro.get(auxIndice).getNome(),));
 							carrinho.get(auxIndiceCarrinho).alterarQtd(auxQtde);
+							auxQtde++;
 
 						} else {
 							System.out.print("\n\t\t\t☛ Quanto deseja comprar: ");
@@ -141,14 +145,18 @@ public class LaikaFast {
 							}
 							titulo.carrinhoAberto();
 							valorTotal = 0;
+							
 							for (Produto item : carrinho) {
+								
 								System.out.println("\n\t\t\t│ Cod. "+item.getCodigo() + "\t\tProduto: " + item.getNome() + "\t\tEm estoque: " +
 							+ item.getValor() + "\tValor: R$" + (item.getEstoque() * item.getValor())+"\t            │");
-								System.out.println("\n\t\t\t│ 📦 Quantidade selecionada:"+auxQtde+"\t                                                                                    │"+"\n");
+								System.out.println("\n\t\t\t│ 📦 Quantidade selecionada:"+item.getEstoque()+"\t                                                                                   │"+"\n");
 								valorTotal += (item.getValor() * item.getEstoque());
+								
 							}
+							
 							titulo.carrinhoValor();
-							System.out.print("\n\t\t\t┃   🛍️ Valor da compra R$ " +valorTotal+"                                                                                          ┃");
+							System.out.print("\n\t\t\t┃   🛍️ Valor da compra R$ " +valorTotal+"                                                                                         ┃");
 							
 							titulo.carrinhoValor1();
 							
@@ -164,9 +172,8 @@ public class LaikaFast {
 						"\n\t\t\t┍━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┐\n");
 				System.out.printf("\t\t\t| 🛍️ Valor total da compra: R$ " + valorTotal
 						+ ", 9%s de imposto sob o valor corresponde a R$ %.2f", "%", (valorTotal * 0.9));
-				System.out.println("            |");
-				System.out.print(
-						"\t\t\t┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┙\n");
+				System.out.println("          |");
+				System.out.print("\t\t\t┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┙\n");
 				leia.nextLine();
 
 				// Dados do Cliente
