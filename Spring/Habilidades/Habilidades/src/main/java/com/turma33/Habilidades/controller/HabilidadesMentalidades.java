@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class HabilidadesMentalidades{
 	@GetMapping
 	public String habilidadesMentalidades() {
-		return "🧡 Habilidade: Atenção aos detalhes; \nMentalidade: Persistência.";
+		return "\n🧡 Habilidade: Atenção aos detalhes; \nMentalidade: Persistência.";
 	}
 }
