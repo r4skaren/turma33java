@@ -12,6 +12,6 @@ import org.springframework.stereotype.Repository;
 //Tipo de entidade = Postagem; Qual a tipagem do ID? Long (tipo primitivo)
 public interface PostagemRepository extends JpaRepository<Postagem, Long>{
 			//primeira consulta - pelo título da postagem
-			public List<Postagem> findAllByTituloContainingIgnoreCase (String titulo); //buscar pelo titulo contém (tipo o like do sql) 
+			public List<Postagem> findAllByTituloContainingIgnoreCase (String titulo); //buscar pelo titulo contém (tipo o like do sql -- buscar por uma determinada string dentro de um campo com valores textuais) 
 			//pra não levar em consideração maiusculo e minusculo
 }
