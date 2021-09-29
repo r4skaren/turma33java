@@ -60,6 +60,7 @@ O Spring Boot é um framework Java open source que tem como objetivo facilitar e
   </tr>
 </table>
 <br>
+...(e outres que serão logo menos acrescentadas)
 <hr size="2">
 
 <h2 align="left"><img src="https://www.videosdopovo.com/wp-content/uploads/2017/12/gif-Carlton-Banks.gif" width="50">   Implementações futuras</h2>
@@ -84,6 +85,8 @@ Após as aulas de sala de invertida e aplicações de Spring Boot, o PI (Projeto
   </tr>
 </table>
 <br>
+
+
 
 ## :handshake: Instrutores
 <table>
@@ -124,4 +127,4 @@ Após as aulas de sala de invertida e aplicações de Spring Boot, o PI (Projeto
 
 ## :dart: Status do projeto
 
-<h3> Em andamento. Registro de (28/09/2021) </h3>
+<h3> Em andamento. Registro de (28/09/2021). </h3>
