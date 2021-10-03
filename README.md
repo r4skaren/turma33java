@@ -123,4 +123,4 @@ Docker é uma plataforma aberta, criada com o objetivo de facilitar o desenvolvi
 
 ## :dart: Status do projeto
 
-<h3> Em andamento ♻ Registro de (02/09/2021) </h3>
+<h3> Em andamento ♻ Registro de (02/10/2021) </h3>
