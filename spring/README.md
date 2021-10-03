@@ -14,7 +14,7 @@ para pronto uso no projeto.
 
 <p>
   
-  * ‼ Não se esqueça, é necessário atenção a alguns detalhes, bem como as configurações que estão na imagem (As principais utilizadas nos projetos da Generation), ex: Project
+  * ‼ Não se esqueça, é necessário atenção a alguns detalhes, como as configurações que estão na imagem (As principais utilizadas nos projetos da Generation), ex: Project
 Maven ou Gradle, Linguagem, Versão e outros. <p>
 ![2021-10-02_23h18_09](https://user-images.githubusercontent.com/86742652/135737170-9d83db4d-a827-4874-8796-c110b661a5aa.png)
   
