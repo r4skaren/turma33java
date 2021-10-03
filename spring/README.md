@@ -10,7 +10,7 @@ para pronto uso no projeto.
 
 <h1></h1>
 
-[Site para baixar seu Spring Initializr](https://start.spring.io/)
+[Site para baixar seu pacote do Spring Initializr](https://start.spring.io/)
 
 <p>
   
