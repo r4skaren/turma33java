@@ -12,6 +12,7 @@ import java.util.Scanner;
 public class Lista2Exer4 {
 	
 		public static void main(String[] args) {
+			@SuppressWarnings("resource")
 			Scanner leia = new Scanner(System.in);
 			
 			//entradas

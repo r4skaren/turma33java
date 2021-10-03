@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class SistemaLeiaIdade {
 
 	/*2. Faça um sistema que leia a idade de uma pessoa expressa em dias e mostre-a
-	expressa em anos, meses e dias.
+	 *expressa em anos, meses e dias.
 	 */
  	
 	public static void main(String[] args) {
@@ -14,7 +14,8 @@ public class SistemaLeiaIdade {
 	 	
 		System.out.println("Escreva sua idade em dias: ");
 		
-    	Scanner leia = new Scanner(System.in);
+    	@SuppressWarnings("resource")
+		Scanner leia = new Scanner(System.in);
     	diasIdade = leia.nextInt();
 		
 		anos = diasIdade/365;

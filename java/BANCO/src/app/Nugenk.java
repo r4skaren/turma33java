@@ -38,6 +38,7 @@ public class Nugenk {
 
 
 		//
+		@SuppressWarnings("resource")
 		Scanner leia = new Scanner(System.in);
 		// Classes contas
 		ContaPoupanca cp1 = new ContaPoupanca(156, "222.333.444-58", 5);

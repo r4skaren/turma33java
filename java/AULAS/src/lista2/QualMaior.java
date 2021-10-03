@@ -10,6 +10,7 @@ public class QualMaior {
 	public static void main(String[] args) {
 		
 		//variaveis
+		@SuppressWarnings("resource")
 		Scanner leia = new Scanner(System.in);//instanciamento
 		int numero1, numero2, numero3,maiorNumero = 0;
 		

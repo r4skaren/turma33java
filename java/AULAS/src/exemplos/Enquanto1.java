@@ -14,6 +14,7 @@ public class Enquanto1 {
 	public static void main(String[] args) {
 		
 		//variaveis
+		@SuppressWarnings("resource")
 		Scanner leia = new Scanner(System.in);
 		double somatorio = 0.00, media = 0.00, total = 0.00, numero = 0.00;
 		

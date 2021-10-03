@@ -2,17 +2,17 @@ package exemplos;
 
 import java.util.Scanner;
 
-/*
-*7) Receber valores de base e altura de um triângulo e verificar se são valores válidos 
-*(positivos maiores que zero). 
-*Em caso afirmativo, calcular a área do triângulo.
- */
+	/*
+	 *7) Receber valores de base e altura de um triângulo e verificar se são valores válidos 
+	 *(positivos maiores que zero). 
+	 *Em caso afirmativo, calcular a área do triângulo.
+	 */
 
 public class MaiorTriangulo {
 
 		public static void main(String[] args) {
-		
-			
+				
+			@SuppressWarnings("resource")
 			Scanner leia = new Scanner(System.in);
 			double base, altura, triangulo,base2, altura2, triangulo2;
 			
@@ -44,6 +44,5 @@ public class MaiorTriangulo {
 				else if (triangulo < triangulo2){
 					System.out.println ("O triangulo com a maior area é: "+triangulo);
 				}
-
-			}
-	}
+		}
+}

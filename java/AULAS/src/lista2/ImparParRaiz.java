@@ -11,6 +11,7 @@ import java.util.Scanner;
 public class ImparParRaiz {
 	
 		public static void main(String[] args) {
+			@SuppressWarnings("resource")
 			Scanner leia = new Scanner(System.in);
 			
 			//entradas

@@ -11,6 +11,7 @@ public class Lista1Exer1 {
 	public static void main(String[] args) {
 		
 		//variaveis
+		@SuppressWarnings("resource")
 		Scanner leia = new Scanner(System.in);//instanciamento
 		int meses, anos, dias, idade;
 				
@@ -28,6 +29,5 @@ public class Lista1Exer1 {
 		//saidas
 		System.out.print("Minha idade aproximadamente é " +idade +" dias");	
 	}
-
 }
 

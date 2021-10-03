@@ -11,6 +11,7 @@ public class Lista3Exer3 {
 	 */
 		public static void main(String[] args) {
 			
+			@SuppressWarnings("resource")
 			Scanner leia = new Scanner(System.in);
 			int idade = 0, TotalPessoas21 = 0, TotalPessoas50 = 0, idadePessoa = 0;
 			

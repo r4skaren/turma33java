@@ -6,6 +6,7 @@ public class Lista2Exer2 {
 
 	public static void main(String[] args) {
 
+		@SuppressWarnings("resource")
 		Scanner leia = new Scanner(System.in);
 		int a=0,b=0,c=0;
 

@@ -6,12 +6,13 @@ public class Lista1Exer3 {
 
 
 	/*3. Faça um sistema que leia o tempo de duração de um evento em uma fábrica
-	expressa em segundos e mostre-o expresso em horas, minutos e segundos. 
+	 *expressa em segundos e mostre-o expresso em horas, minutos e segundos. 
 	 */
 
 		public static void main(String[] args) {
 		
 			//variaveis
+			@SuppressWarnings("resource")
 			Scanner leia = new Scanner(System.in);//instanciamento
 			int horas, minutos , tempoDuracaoEventoSegundos, seg;
 	

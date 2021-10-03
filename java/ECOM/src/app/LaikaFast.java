@@ -16,9 +16,11 @@ public class LaikaFast {
 	public static void main(String[] args) {
 		
 		/*AVISO: para que seu console apresente a melhor performace de design
-		configure a fonte do seu console para verdana - regular - 14   */
+		*configure a fonte do seu console para verdana - regular - 14   
+		*/
 		
 		Locale.setDefault(Locale.US);
+		@SuppressWarnings("resource")
 		Scanner leia = new Scanner(System.in);
 		Leitores leitor = new Leitores();
 		Titulos titulo = new Titulos();
@@ -28,21 +30,16 @@ public class LaikaFast {
 	               + "\t\t\t║\t\tCOD \t","\tPRODUTO\t", "\t\tESTOQUE","\t\tVALOR R$             ║" };
 		int auxIndice = 0, auxIndiceCarrinho = 0;
 		int auxQtde = 0;
-		char respostaWhile = 'S', respostaAlteraQtd;
+		char respostaWhile = 'S';
 		double valorTotal = 0;
-		boolean validador = false, a = true;
-		int b = 1;
+		boolean validador = false;
 		String nome;
 		String cpf;
 
 		char respostaLoop = 'S';
-		int contador = 0;
-		
 		LocalDateTime data = LocalDateTime.now();
 		
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
-		String dataFormatada = data.format(formatter);
 
 		formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 		
@@ -200,7 +197,6 @@ public class LaikaFast {
 
 				case 1:
 
-					b = 3;
 					leia.nextLine();
 					System.out.print("\n▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅▅");
 					titulo.linhaNotaF();
@@ -225,7 +221,6 @@ public class LaikaFast {
 					System.out.print(
 							"\n\t\t                     AGRADECEMOS PELA PREFERÊNCIA! VOLTE SEMPRE!                                            ");
 					titulo.linhaNotaF();
-					a = false;
 					break;
 
 				case 2:
@@ -241,7 +236,6 @@ public class LaikaFast {
 					titulo.linhaNotaF();
 					System.out.print("\t\t\tCÓDIGO\t\tPRODUTO\t\t\tVL. UNIT\t\t\tQTD.\n");
 					titulo.linhaNotaF();
-					b = 3;
 					for (Produto item : carrinho) {
 						System.out.println("\n\t\t\t"+item.getCodigo() + "\t\t" + item.getNome()+"\t\t\t"+ item.getValor() + "\t\t\t\t"+item.getEstoque());	
 					}
@@ -255,8 +249,6 @@ public class LaikaFast {
 					System.out.print(
 							"\n\t\t                     AGRADECEMOS PELA PREFERÊNCIA! VOLTE SEMPRE!                                            ");
 					titulo.linhaNotaF();
-					a = false;
-
 					break;
 
 				case 3:
@@ -272,7 +264,6 @@ public class LaikaFast {
 					titulo.linhaNotaF();
 					System.out.print("\t\t\tCÓDIGO\t\tPRODUTO\t\t\tVL. UNIT\t\t\tQTD.\n");
 					titulo.linhaNotaF();
-					b = 3;
 					for (Produto item : carrinho) {
 						System.out.println("\n\t\t\t"+item.getCodigo() + "\t\t" + item.getNome()+"\t\t\t"+ item.getValor() + "\t\t\t\t"+item.getEstoque());	
 					}
@@ -286,12 +277,9 @@ public class LaikaFast {
 					System.out.print(
 							"\n\t\t                     AGRADECEMOS PELA PREFERÊNCIA! VOLTE SEMPRE!                                            ");
 					titulo.linhaNotaF();
-					a = false;
-
 					break;
 
 				default:
-					b = 1;
 					System.out.print("\n\t\t\t⌦ Opção invalida tente novamente!");
 
 				}
@@ -305,7 +293,6 @@ public class LaikaFast {
 			}
 			carrinho.clear();
 			System.out.print("\n\n\t\t\tDeseja realizar outra compra?");
-			a=false;
 			respostaLoop = leia.next().toUpperCase().charAt(0);
 		}
 	}

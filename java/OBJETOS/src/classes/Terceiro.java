@@ -1,6 +1,6 @@
 package classes;
 
-public class Terceiro extends Funcionario implements Lista5Exer1Treinamento{
+public abstract class Terceiro extends Funcionario implements Lista5Exer1Treinamento{
         	
 	private double adicional;
 

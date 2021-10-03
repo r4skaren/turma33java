@@ -3,8 +3,6 @@ package classes;
 
 public class Lista5Exer1Cachorro extends Lista5Exer1Animal implements Lista5Exer1Treinamento {
 
-		private String corrida;
-
 		public Lista5Exer1Cachorro(String nome, int idade,  String som, String corrida)
 	    {
 	    	super(nome, idade, som, corrida);

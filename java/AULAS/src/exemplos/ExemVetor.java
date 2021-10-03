@@ -2,16 +2,17 @@ package exemplos;
 
 import java.util.Scanner;
 
-/*/*
- * Faça um programa que crie um vetor por leitura com 
- * 5 valores de pontuação de uma atividade e o escreva em seguida. 
- * Encontre após a maior pontuação e a apresente. 
- */
+	/*
+	 * Faça um programa que crie um vetor por leitura com 
+	 * 5 valores de pontuação de uma atividade e o escreva em seguida. 
+	 * Encontre após a maior pontuação e a apresente. 
+	 */
 
 public class ExemVetor {
 
 	public static void main(String[] args) {
 		
+		@SuppressWarnings("resource")
 		Scanner leia = new Scanner(System.in);
 		int maiorNota = 0;
 		int pontuacaoAtividade[] = new int [5];

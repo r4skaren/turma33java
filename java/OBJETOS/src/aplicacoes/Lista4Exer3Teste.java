@@ -10,6 +10,7 @@ public static void main(String[] args) {
 		
 		Lista4Exer3 eletronico1 = new Lista4Exer3();
 		Lista4Exer3 eletronico2 = new Lista4Exer3();
+		@SuppressWarnings("resource")
 		Scanner leia = new Scanner(System.in);
 		
 		//eletronico 1

@@ -14,6 +14,7 @@ public class CategoriaIdade {
 		public static void main(String[] args) {
 			
 		//variaveis
+		@SuppressWarnings("resource")
 		Scanner leia = new Scanner(System.in);//instanciamento
 		int idade;
 		

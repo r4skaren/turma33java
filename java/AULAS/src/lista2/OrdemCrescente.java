@@ -1,12 +1,12 @@
 package lista2;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class OrdemCrescente {
 
 	public static void main(String[] args) {
 
+		@SuppressWarnings("resource")
 		Scanner leia = new Scanner(System.in);
 		int a=0,b=0,c=0;
 

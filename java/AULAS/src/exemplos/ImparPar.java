@@ -7,6 +7,7 @@ public class ImparPar {
 	public static void main(String[] args) {
 		
 		//variaveis
+		@SuppressWarnings("resource")
 		Scanner leia = new Scanner(System.in);
 		int numero;
 		

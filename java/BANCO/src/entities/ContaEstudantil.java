@@ -7,9 +7,7 @@ public class ContaEstudantil extends Conta {
 	
 				//atributos
 				private double limiteEstudantil;
-				private String resposta;
 				
-							
 				//construtores
 				public ContaEstudantil(int numero, String cpf, double limiteEstudantil) {
 					//super cria relação com a classe principal

@@ -50,10 +50,10 @@ public class Lista5Exer1Animal {
 			return corrida;
 		}
 		
-		public void setCorrida()
-		{
-			this.corrida = corrida;
-		}
+		//public void setCorrida()
+		//{
+			//this.corrida = corrida;
+		//}
 		
 		public void exibir() 
 		{

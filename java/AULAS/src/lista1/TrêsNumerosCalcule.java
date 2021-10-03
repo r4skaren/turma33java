@@ -7,6 +7,7 @@ public class TrêsNumerosCalcule {
 	public static void main(String[] args) {
 		
 		//variaveis
+		@SuppressWarnings("resource")
 		Scanner leia = new Scanner(System.in);//instanciamento
 		int A,B,C,D,R,S;
 

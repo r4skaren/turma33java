@@ -5,6 +5,7 @@ public class CelsiusFahren {
 	public static void main(String[] args) {
 
 		//variaveis
+		@SuppressWarnings("resource")
 		Scanner leia = new Scanner(System.in);//instanciamento
 		String nome;
 		double celsius;

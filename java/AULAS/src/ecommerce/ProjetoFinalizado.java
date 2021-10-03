@@ -11,6 +11,7 @@ public class ProjetoFinalizado {
 		//AVISO = para que seu console apresente a melhor performace de design
 		//configure a fonte do seu console para verdana/regular/14
 		
+		@SuppressWarnings("resource")
 		Scanner leia = new Scanner(System.in);	
 		
 		
@@ -20,8 +21,6 @@ public class ProjetoFinalizado {
 		// formatação da data
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
-	    String dataFormatada = data.format(formatter);
-	    
 	    formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm:ss");
 	    
 	    String dataFormatado = data.format(formatter);
@@ -46,7 +45,6 @@ public class ProjetoFinalizado {
 			String codProduto, nome, cpf;
 			int linha = 0, quantidade = 0, contador = 0, enderecoCarrinho = 0;
 			double valorCompra = 0.00;
-			char resposta2;
 			int numero;
 			int a = 2, b = 1;
 			
