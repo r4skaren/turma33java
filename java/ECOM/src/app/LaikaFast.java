@@ -16,8 +16,7 @@ public class LaikaFast {
 	public static void main(String[] args) {
 		
 		/*AVISO: para que seu console apresente a melhor performace de design
-		*configure a fonte do seu console para verdana - regular - 14   
-		*/
+		configure a fonte do seu console para verdana - regular - 14   */
 		
 		Locale.setDefault(Locale.US);
 		@SuppressWarnings("resource")
@@ -158,16 +157,17 @@ public class LaikaFast {
 							System.out.print("\n\n\t\t\tDeseja  adicionar ou modificar produtos? \n\n\t\t\tDigite S para sim ou N para não: ");
 							respostaWhile = leia.next().toUpperCase().charAt(0);
 							System.out.print("\n");
-							
 						}
+						
 				// Total da Compra e Impostos
 				titulo.logo();
 				System.out.print("\n\t\t\t┍━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┐\n");
-				System.out.printf("\t\t\t| 🛍️ Valor total da compra: R$ ",valorTotal,", 9%s de imposto sob o valor corresponde a R$ %.2f", "%", (valorTotal * 0.9));
+				System.out.print("\t\t\t| 🛍️ Valor total da compra: R$ "+valorTotal);
+				System.out.printf(", 9%s de imposto sob o valor corresponde a R$ %.2f", "%",(valorTotal * 0.9));
 				System.out.println("          |");
 				System.out.print("\t\t\t┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┙\n");
 				leia.nextLine();
-								
+							
 						}
 				// Dados do Cliente
 				System.out.println("\n\n\t\t\t▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄▄");
