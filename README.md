@@ -40,8 +40,6 @@ Para acessar os projetos e fazê-los é necessário que:
 
 ## 🤝 Colaboradores
 
-Agradecemos às seguintes pessoas que contribuíram para este projeto:
-
 <table>
   <tr>
     <td align="center">
