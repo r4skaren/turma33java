@@ -1,126 +1,81 @@
-<div style="display: inline_block">
-    <h1 align="CENTER">BOOTCAMP <p><img src="https://i.imgur.com/oGKvCzi.png" width="300"></h1>
+<div align="center">
+  
+# ESTUDOS INICIAIS
+
+
+![GitHub last-modified](https://img.shields.io/aur/last-modified/template?label=ultima%20modificacao&style=social)
+![GitHub forks](https://img.shields.io/github/forks/r4skaren/template-readme?style=social)
+![GitHub stars](https://img.shields.io/github/stars/r4skaren/template-readme?label=estrelas&style=social)
+
+<h1 align="CENTER">BOOTCAMP <p><img src="https://i.imgur.com/oGKvCzi.png" width="300"></h1>
    <br>
 
-## :memo: Descrição
-Neste repostitório você poderá se deparar com a maior parte de minha trajetória na Generation com a turma 33. Um bootcamp *(treinamento imersivo feito para o desenvolvimento de habilidades importantes em diversas áreas)*, que tem como foco nos tornar Desenvolvedores Full Stacks Juniors. 
-<br>
-## :round_pushpin: Antes que você navegue entre as pastas:
-<br>
-Gostaria de escurecer que sou apenas uma estudande e todo conhecimento e dicas são mais que bem vindes, são extremamente necessários. Então, fique a vontade para apontar qualquer coisa dentro dos amados códigos! 🥰
-
-<br>
-<hr size="3">
 <br>
 
-## :wrench: Tecnologias utilizadas até o momento (qual e o que é)
-<table>
-  <tr>
-    <td align="center"> 
-                <br>
-      <img align="left" alt="Ka-Java" height="40" width="40" src="https://img.icons8.com/color/48/000000/java-coffee-cup-logo--v2.png"/>
-O Java é uma tecnologia usada para desenvolver aplicações que tornam a Web mais divertida e útil. Como linguagem de programação, o código Java é baseado em classes e orientado a objetos, com foco em segurança, portabilidade e alta performance. Para saber mais, <a href="https://rockcontent.com/br/blog/o-que-e-java/"><b>clique aqui.</b>
-  </sub>
-      </a>
-    </td>
-  </tr>
-</table>
+> Neste bootcamp busca-se desenvolver habilidades técnicas (Lógica de programação, Estrutura de dados, Banco de Dados, HTML + CSS + Javascript, Programação Avançada e Metodologia SCRUM) e comportamentais (Comunicação, Orientação ao Detalhe, Proatividade e Trabalho em Equipe).
+
 <br>
 
-<table>
-  <tr>
-    <td align="center"> 
-<img align="left" alt="Ka-Mysql" height="40" width="40" src="https://img.icons8.com/fluency/48/000000/mysql-logo.png"/>
-O MySQL é um sistema gerenciador de banco de dados relacional de código aberto usado na maioria das aplicações gratuitas para gerir suas bases de dados. Para saber mais, <a href="https://rockcontent.com/br/blog/mysql/"><b>clique aqui.</b>
-       </sub>
-      </a>
-    </td>
-  </tr>
-</table>
+</div>
+
+## 💻 Pré-requisitos para rodar o projeto
+
+Antes de começar, verifique se você atendeu aos seguintes requisitos:
+<!---Adicionar, duplicar ou remover conforme necessário--->
+* Descruzou as pernas e fez oração do dev 
+* Leu atentamente a documentação `<guia / link / documentação_relacionada_ao_projeto>`.
+
+
 <br>
 
-<table>
-  <tr>
-    <td align="center"> 
-        <br>
-<img align="left" alt="Ka-Portugol" height="40" width="40" src="https://lh3.googleusercontent.com/proxy/80rLwcps74_Bucuo2MJ3-u31r48FLeTczgZIA4U9LXfY3yQjL8WmF36aTn6O1g4ynptcIDDufol9P1wA7MdlUymdrnB-WjSvgEsc3g6ZTIw"/>
-O Portugol é uma pseudo-linguagem algorítmica muito utilizada na descrição de algoritmos, destaca-se pelo uso de comandos em português, o que facilita o aprendizado da lógica de programação, habituando o iniciante as práticas de programação. Para saber mais, <a href="https://www.devmedia.com.br/o-que-e-portugol-studio/40764"><b>clique aqui.</b> 
- </sub>
-      </a>
-    </td>
-  </tr>
-</table>
+## 🚀 Instalando <nome_do_projeto>
+
+Para instalar o <nome_do_projeto>, siga estas etapas:
+
+Windows:
+```linguagem
+<comando_de_instalação>
+```
+
+## ☕ Usando <nome_do_projeto>
+
+Para usar <nome_do_projeto>, siga estas etapas:
+
+```linguagem
+<exemplo_de_uso>
+```
+
+Adicione comandos de execução e exemplos que você acha que os usuários acharão úteis. Fornece uma referência de opções para pontos de bônus!
+
 <br>
 
-<table>
-  <tr>
-    <td align="center"> <img align="left" alt="Ka-Spring" height="40" width="40" src="https://img.icons8.com/color/48/000000/spring-logo.png"/>
-O Spring Boot é um framework Java open source que tem como objetivo facilitar esse processo em aplicações Java. Assim, os devs conseguem diminuir o tempo gasto com configurações iniciais. Para saber mais, <a href="https://www.devmedia.com.br/spring-boot-simplificando-o-spring/31979"><b>clique aqui.</b>
- </sub>
-      </a>
-    </td>
-  </tr>
-</table>
-<br>
+## 📫 Contribuindo para <nome_do_projeto>
+<!---Se o seu README for longo ou se você tiver algum processo ou etapas específicas que deseja que os contribuidores sigam, considere a criação de um arquivo CONTRIBUTING.md separado--->
+Para contribuir com <nome_do_projeto>, siga estas etapas:
 
-<hr size="2">
+1. Bifurque este repositório.
+2. Crie um branch: `git checkout -b <nome_branch>`.
+3. Faça suas alterações e confirme-as: `git commit -m '<mensagem_commit>'`
+4. Envie para o branch original: `git push origin <nome_do_projeto> / <local>`
+5. Crie a solicitação de pull.
 
-<h2 align="left"><img src="https://www.videosdopovo.com/wp-content/uploads/2017/12/gif-Carlton-Banks.gif" width="50">   Implementações futuras</h2>
-     
-<table>
-  <tr>
-    <td align="center"> 
-      <img align="left" alt="Ka-Docker" height="40" width="40" src="https://www.mundodocker.com.br/wp-content/uploads/2015/06/docker_facebook_share.png"/>
-Docker é uma plataforma aberta, criada com o objetivo de facilitar o desenvolvimento, a implantação e a execução de aplicações em ambientes isolados (Proxímo Bloco de Conteúdo). Para saber mais, 
-<a href="https://stack.desenvolvedor.expert/appendix/docker/oquee.html"><b>clique aqui.</b>
-  </sub>
-      </a>
-    </td>
-  </tr>
-   <tr>
-  </tr>
-</table>
-<br>
+Como alternativa, consulte a documentação do GitHub em [como criar uma solicitação pull](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request).
 
+## 🤝 Colaboradores
 
+Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
-## :handshake: Instrutores
 <table>
   <tr>
     <td align="center">
-      <h4>Instrutore de Jornada</h4>
-      <a href="http://github.com/tatialveso">
-        <img src="https://avatars.githubusercontent.com/u/56259137?v=4" width="100px;" alt="Foto de Tati Alves no GitHub"/><br>
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/86742652?v=4" width="100px;" height="100px" alt="Foto"/><br>
         <sub>
-          <b>tatialveso</b>
+          <b>Karen Rodrigues</b>
         </sub>
       </a>
     </td>
-    <td align="center">
-      <h4>Instrutore Bloco 1</h4>
-      <a href="https://github.com/EDNILSON-NASCIMENTO">
-        <img src="https://avatars.githubusercontent.com/u/57823621?v=4" width="100px;" alt="Foto de Ednilson Nascimento no GitHub"/><br>
-        <sub>
-          <b>EDNILSON-NASCIMENTO</b>
-        </sub>
-      </a>
-    </td>
-     </td>
-    <td align="center">
-      <h4>Instrutore Bloco 2</h4>
-      <a href="https://github.com/camillacleanne">
-        <img src="https://avatars.githubusercontent.com/u/57760132?v=4" width="100px;" alt="Foto de Camilla Cleane no GitHub"/><br>
-        <sub>
-          <b>camillacleanne</b>
-        </sub>
-      </a>
-    </td>
-  </tr>  
+  </tr>
 </table>
 
-
-<br>
-
-## :dart: Status do projeto
-
-<h3> Em andamento ♻ Registro de (02/10/2021) </h3>
+[⬆ Voltar ao topo](#turma33java)<br>
